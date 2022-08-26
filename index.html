@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>Instagram Photo Feed con Bootstrap</title>
+</head>
+
+<body>
+    <div class="container-fuild px-5 mx-5">
+        <!-- nav bar -->
+        <nav class="navbar navbar-light bg-light ">
+            <div class="container-fluid">
+            <div class="d-flex flex-row m-1 px-3">
+                <a class="navbar-brand" href="#"><i class="bi bi-instagram display-6"></i> <span class="display-6">Instagram</span></a>
+            </div>
+            <div class="d-flex flex-row m-3 px-3">
+                <button type="button" class="btn btn-success me-4 " data-bs-toggle="modal" data-bs-target="#exampleModal">Create a new post</button>
+                <div class="dropdown">
+                <i class="bi bi-gear-fill display-6 dropdown-toggle" type="button" id="dropdownmenu2" data-bs-toggle="dropdown"></i>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                  <li><button class="dropdown-item" type="button">Action</button></li>
+                  <li><button class="dropdown-item" type="button">Another action</button></li>
+                  <li><button class="dropdown-item" type="button">Something else here</button></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Log Out</a></li>
+                </ul>
+                </div>
+            </div>
+            </div>
+        </nav>
+        <!-- modals -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="form-floating p-3">
+                  <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea></div>
+                <!-- botones de camara y location -->
+                <div class="modal-header d-flex justify-content-start">
+                  <button type="button" class="btn btn-light border-dark"><i class="bi bi-camera-fill"></i></button>
+                  <button type="button" class="btn btn-light border-dark"><i class="bi bi-geo-alt-fill"></i></button>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-light border border-dark" data-bs-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-success">Publish</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- cajitas con cuadritos de fotos -->
+          <ul class="nav nav-pills mb-3 m-3 justify-content-center" id="pills-tab" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button class="nav-link active boton" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true"><i class="bi bi-grid-3x3-gap-fill" ></i></button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link boton" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false"><i class="bi bi-square-fill display-10"  ></i></button>
+            </li>
+          </ul>
+          <!-- div para agregar fotos en forma de galeria -->
+          <div class="tab-content" id="pills-tabContent">
+            <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0">
+              <!-- fotos -->
+              <div class="row">
+                <div class="col-4 my-1">
+                <img src="https://picsum.photos/id/237/640/360" class="img-fluid" alt="...">
+                </div>
+                <div class="col-4 my-1">
+                <img src="https://picsum.photos/id/238/640/360" class="img-fluid" alt="...">
+                </div>
+                <div class="col-4 my-1">
+                  <img src="https://picsum.photos/id/239/640/360" class="img-fluid" alt="...">
+                </div>
+                <div class="col-4 my-1">
+                  <img src="https://picsum.photos/id/240/640/360" class="img-fluid" alt="...">
+                </div>
+                <div class="col-4 my-1">
+                  <img src="https://picsum.photos/id/241/640/360" class="img-fluid" alt="...">
+                </div>
+                <div class="col-4 my-1">
+                  <img src="https://picsum.photos/id/242/640/360" class="img-fluid" alt="...">
+                </div>
+                <div class="col-4 my-1">
+                  <img src="https://picsum.photos/id/243/640/360" class="img-fluid" alt="...">
+                </div>
+                <div class="col-4 my-1">
+                  <img src="https://picsum.photos/id/244/640/360" class="img-fluid" alt="...">
+                </div>
+                <div class="col-4 my-1">
+                  <img src="https://picsum.photos/id/236/640/360" class="img-fluid" alt="...">
+                </div>
+              </div>
+            </div>
+            <!-- div para agregar fotos en forma de scroll down -->
+            <div class="tab-pane fade bg-light " id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">
+                <div class="card mx-auto" style="width: 30rem;">
+                  <div class="row">
+                    <div class="col-5"><h5>Lorem ipsum</h5></div>
+                    <div class="col-2 position-absolute top-0 end-0">12/14</div>
+                  </div>
+                  <img src="https://picsum.photos/id/237/640/360" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h6>23 Likes</h6> 
+                    <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis quidem impedit illo culpa ipsum itaque sunt consequuntur fugiat. Reprehenderit tempora quisquam animi, iusto excepturi eaque saepe hic qui harum neque?
+                    </p>
+                  </div>
+                </div>
+                <br>
+                <div class="card mx-auto" style="width: 30rem;">
+                  <div class="row">
+                    <div class="col-5"><h5>Lorem ipsum</h5></div>
+                    <div class="col-2 position-absolute top-0 end-0">12/14</div>
+                  </div>
+                  <img src="https://picsum.photos/id/238/640/360" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h6>23 Likes</h6> 
+                    <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis quidem impedit illo culpa ipsum itaque sunt consequuntur fugiat. Reprehenderit tempora quisquam animi, iusto excepturi eaque saepe hic qui harum neque?
+                    </p>
+                  </div>
+                </div>
+                <br>
+                <div class="card mx-auto" style="width: 30rem;">
+                  <div class="row">
+                    <div class="col-5"><h5>Lorem ipsum</h5></div>
+                    <div class="col-2 position-absolute top-0 end-0">12/14</div>
+                  </div>
+                  <img src="https://picsum.photos/id/239/640/360" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h6>23 Likes</h6> 
+                    <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis quidem impedit illo culpa ipsum itaque sunt consequuntur fugiat. Reprehenderit tempora quisquam animi, iusto excepturi eaque saepe hic qui harum neque?
+                    </p>
+                  </div>
+                </div>
+                <br>
+                <div class="card mx-auto" style="width: 30rem;">
+                  <div class="row">
+                    <div class="col-5"><h5>Lorem ipsum</h5></div>
+                    <div class="col-2 position-absolute top-0 end-0">12/14</div>
+                  </div>
+                  <img src="https://picsum.photos/id/240/640/360" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h6>23 Likes</h6> 
+                    <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis quidem impedit illo culpa ipsum itaque sunt consequuntur fugiat. Reprehenderit tempora quisquam animi, iusto excepturi eaque saepe hic qui harum neque?
+                    </p>
+                  </div>
+                </div>
+                <br>
+                <div class="card mx-auto" style="width: 30rem;">
+                  <div class="row">
+                    <div class="col-5"><h5>Lorem ipsum</h5></div>
+                    <div class="col-2 position-absolute top-0 end-0">12/14</div>
+                  </div>
+                  <img src="https://picsum.photos/id/241/640/360" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h6>23 Likes</h6> 
+                    <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis quidem impedit illo culpa ipsum itaque sunt consequuntur fugiat. Reprehenderit tempora quisquam animi, iusto excepturi eaque saepe hic qui harum neque?
+                    </p>
+                  </div>
+                </div>
+                <br>
+                <div class="card mx-auto" style="width: 30rem;">
+                  <div class="row">
+                    <div class="col-5"><h5>Lorem ipsum</h5></div>
+                    <div class="col-2 position-absolute top-0 end-0">12/14</div>
+                  </div>
+                  <img src="https://picsum.photos/id/242/640/360" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h6>23 Likes</h6> 
+                    <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis quidem impedit illo culpa ipsum itaque sunt consequuntur fugiat. Reprehenderit tempora quisquam animi, iusto excepturi eaque saepe hic qui harum neque?
+                    </p>
+                  </div>
+                </div>
+                <br>
+                <div class="card mx-auto" style="width: 30rem;">
+                  <div class="row">
+                    <div class="col-5"><h5>Lorem ipsum</h5></div>
+                    <div class="col-2 position-absolute top-0 end-0">12/14</div>
+                  </div>
+                  <img src="https://picsum.photos/id/243/640/360" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h6>23 Likes</h6> 
+                    <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis quidem impedit illo culpa ipsum itaque sunt consequuntur fugiat. Reprehenderit tempora quisquam animi, iusto excepturi eaque saepe hic qui harum neque?
+                    </p>
+                  </div>
+                </div>
+                <br>
+                <div class="card mx-auto" style="width: 30rem;">
+                  <div class="row">
+                    <div class="col-5"><h5>Lorem ipsum</h5></div>
+                    <div class="col-2 position-absolute top-0 end-0">12/14</div>
+                  </div>
+                  <img src="https://picsum.photos/id/244/640/360" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h6>23 Likes</h6> 
+                    <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis quidem impedit illo culpa ipsum itaque sunt consequuntur fugiat. Reprehenderit tempora quisquam animi, iusto excepturi eaque saepe hic qui harum neque?
+                    </p>
+                  </div>
+                </div>
+                <br>
+                <div class="card mx-auto" style="width: 30rem;">
+                  <div class="row">
+                    <div class="col-5"><h5>Lorem ipsum</h5></div>
+                    <div class="col-2 position-absolute top-0 end-0">12/14</div>
+                  </div>
+                  <img src="https://picsum.photos/id/236/640/360" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h6>23 Likes</h6> 
+                    <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis quidem impedit illo culpa ipsum itaque sunt consequuntur fugiat. Reprehenderit tempora quisquam animi, iusto excepturi eaque saepe hic qui harum neque?
+                    </p>
+                  </div>
+                </div>
+                
+              </div>
+                
+                
+          
+    </div>
+        <!-- JavaScript Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+            crossorigin="anonymous"></script>
+</body>
+
+</html>

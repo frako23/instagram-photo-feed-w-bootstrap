@@ -1,0 +1,9 @@
+.boton.active {
+    color: white !important;
+    background-color: grey !important;
+  }
+
+  .boton {
+    color: grey !important;
+    background-color: white !important;
+  }
